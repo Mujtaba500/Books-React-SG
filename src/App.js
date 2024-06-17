@@ -8,7 +8,9 @@ export default function App() {
 
   useEffect(() => {
     fetchBooks();
-  }, []);
+
+    //Fix ESLINT warning when calling functions in useEffect
+  }, [fetchBooks]);
 
   return (
     <div className="app">
